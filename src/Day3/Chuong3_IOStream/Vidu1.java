@@ -1,4 +1,4 @@
-package Day3.Chuong3;
+package Day3.Chuong3_IOStream;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
