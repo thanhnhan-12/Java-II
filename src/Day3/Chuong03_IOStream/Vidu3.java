@@ -1,4 +1,4 @@
-package Day3.Chuong3_IOStream;
+package Day3.Chuong03_IOStream;
 
 import java.io.File;
 import java.io.PrintWriter;
