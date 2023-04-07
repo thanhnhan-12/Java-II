@@ -1,4 +1,4 @@
-package Day4.HomeWork;
+package Day4.Chuong04_Thread;
 
 public class Vidu4 extends Thread{
 	public void run() {
