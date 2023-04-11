@@ -20,7 +20,8 @@ public class InsertTable {
             System.out.println("Connect Successfully!");
 
             // 3. Executed Query
-            PreparedStatement ps = conn.prepareStatement("Insert into students (id, name, java, note) values (?, ?, ?, ?) ");
+            PreparedStatement ps = conn
+                    .prepareStatement("Insert into students (id, name, java, note) values (?, ?, ?, ?) ");
             conn.setAutoCommit(false);
             for (int i = 0; i < notes.length; i++) {
                 ps.setString(1, id[i]);
