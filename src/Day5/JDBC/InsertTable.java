@@ -2,14 +2,13 @@ package Day5.JDBC;
 
 import java.sql.*;
 
-public class PreparedStatement {
+public class InsertTable {
 
     public static void main(String[] args) {
         String[] id = { "5", "6" };
         String[] names = { "Tuchel", "Nagelsmann" };
         String[] java = { "6", "7" };
         String[] notes = { "T", "F" };
-        // java.sql.PreparedStatement ps;
 
         try {
             // 1. Load Driver
@@ -21,8 +20,7 @@ public class PreparedStatement {
             System.out.println("Connect Successfully!");
 
             // 3. Executed Query
-            java.sql.PreparedStatement ps = conn
-                    .prepareStatement("Insert into students (id, name, java, note) values (?, ?, ?, ?) ");
+            PreparedStatement ps = conn.prepareStatement("Insert into students (id, name, java, note) values (?, ?, ?, ?) ");
             conn.setAutoCommit(false);
             for (int i = 0; i < notes.length; i++) {
                 ps.setString(1, id[i]);
@@ -39,7 +37,7 @@ public class PreparedStatement {
             int col = rsmd.getColumnCount();
 
             for (int i = 1; i <= col; i++) {
-                System.out.print(rsmd.getColumnLabel(i) + "\t");
+                System.out.print(rsmd.getColumnLabel(i) + "\t\t");
             }
 
             System.out.println();
